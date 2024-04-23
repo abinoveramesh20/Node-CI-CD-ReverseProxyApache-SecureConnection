@@ -6,10 +6,10 @@
     <title>Rental Cab Service</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7; /* Light grey background */
+            background-color: #f8f8f8;
         }
         header {
             background-color: #333;
@@ -25,7 +25,7 @@
         .main-content {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start; /* Align items to the top */
+            align-items: flex-start;
             flex-wrap: wrap;
         }
         .cab-card {
@@ -39,20 +39,27 @@
             transition: transform 0.3s ease;
         }
         .cab-card:hover {
-            transform: translateY(-10px); /* Lift the card up on hover */
+            transform: translateY(-10px);
         }
         .cab-card img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
             margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         .cab-info h2 {
             margin-top: 0;
-            color: #333; /* Darker text color */
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
         .cab-info p {
-            color: #666; /* Lighter text color */
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
         }
         footer {
             background-color: #333;
@@ -60,11 +67,15 @@
             text-align: center;
             padding: 20px 0;
         }
+        footer p {
+            margin: 0;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Rent Your Cab Now</h1>
+        <h1>Explore our Luxury Fleet</h1>
+        <p>Book your ride with ease and style</p>
     </header>
     <div class="container">
         <div class="main-content">
@@ -72,7 +83,7 @@
                 <img src="https://images.unsplash.com/photo-1579621979685-4d331fbf3e23" alt="Sedan Cab">
                 <div class="cab-info">
                     <h2>Sedan</h2>
-                    <p>Comfortable and spacious sedan for your travel needs.</p>
+                    <p>Experience comfort and elegance with our sedan collection. Perfect for solo trips or small groups.</p>
                     <p>Starting from $30/hour</p>
                 </div>
             </div>
@@ -80,7 +91,7 @@
                 <img src="https://images.unsplash.com/photo-1561887913-d08c56231f87" alt="SUV Cab">
                 <div class="cab-info">
                     <h2>SUV</h2>
-                    <p>Roomy SUVs for your family trips or group travels.</p>
+                    <p>Explore the outdoors in our spacious SUVs. Ideal for family trips or group adventures.</p>
                     <p>Starting from $40/hour</p>
                 </div>
             </div>
@@ -88,7 +99,7 @@
                 <img src="https://images.unsplash.com/photo-1542262564-cbc5fecd8d68" alt="Luxury Cab">
                 <div class="cab-info">
                     <h2>Luxury</h2>
-                    <p>Experience luxury with our premium car fleet.</p>
+                    <p>Indulge in luxury and sophistication with our premium car fleet. Elevate your travel experience.</p>
                     <p>Starting from $60/hour</p>
                 </div>
             </div>
