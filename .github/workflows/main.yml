@@ -1,0 +1,29 @@
+name: CICD
+
+on:
+  push:
+    branches:
+      - main # or whatever your main branch name is
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: self-hosted
+    if: github.ref == 'refs/heads/main' 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+    
+      - name: Install dependencies
+        run: npm install 
+      - name: Deploy to server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          script: |
+            cd /var/www/html/Node-CI-CD-ReverseProxy-SecureConnection
+            git pull origin main
