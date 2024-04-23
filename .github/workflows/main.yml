@@ -28,3 +28,5 @@ jobs:
             cd /var/www/html/Node-CI-CD-ReverseProxy-SecureConnection
             git pull origin main
             sudo systemctl restart apache2
+            sudo pm2 start server.js
+            sudo pm2 startup
